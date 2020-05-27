@@ -1,0 +1,21 @@
+{
+    "name": "salhackbot",
+    "version": "0.0.1",
+    "engines": {
+      "node": "12.16.2",
+      "npm": "6.14.4"
+    },
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node app.js"
+    },
+    "dependencies": {
+      "discord.js": "12.2.0",
+      "minecraft-pinger": "^1.0.3",
+      "minecraft-server-ping": "0.0.1",
+      "moment": "2.20.1",
+      "request": "^2.88.2"
+    }
+  }
+  
