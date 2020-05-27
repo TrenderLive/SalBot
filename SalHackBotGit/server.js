@@ -116,7 +116,7 @@ client.on("ready", () => { //Startup
 });
 
 client.on('message', async message => { //AutoRetard
-  let blacklisted = ['gui'] //Gotta optimise so that I can put all the keywords in one block
+  let blacklisted = ['gui'] //Gotta optimise so that I can put all the keywords in one block (Shortened to save your eyes
 
 
   let foundInText = false;
