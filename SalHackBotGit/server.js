@@ -191,11 +191,40 @@ if (!banMember) { return message.channel.send('User not found!'); }
     }});
 
 
+
+    client.on(`message`, async message => {
+      if(message.content.indexOf(config.prefix) !== 0) return;
+      const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+      const command = args.shift().toLowerCase();
+      if(command === "startpoll") {
+      const sayMessage = args.join(" ");
+      // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+      message.delete().catch(O_o=>{}); 
+      // And we get the bot to say the thing: 
+      message.channel.send("POLL: " + sayMessage).then(sentEmbed => {
+        sentEmbed.react("👍")
+        sentEmbed.react("👎")
+    })
+    }
+  });
     
-  client.on(`message`, async message => { //Ping (To check if heroku is dying or my wifi is dying)
+  client.on(`message`, async message => {
     if (message.content.startsWith(`~ping`))  {
     const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms.`);
+  }
+});
+
+client.on(`message`, async message => {
+  if(message.content.indexOf(config.prefix) !== 0) return;
+  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+  if(command === "announcement45992") {
+  const sayMessage = args.join(" ");
+  // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+  message.delete().catch(O_o=>{}); 
+  // And we get the bot to say the thing: 
+  message.channel.send("ANNOUNCEMENT: " + sayMessage)
   }
 });
   
