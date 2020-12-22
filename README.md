@@ -1,4 +1,3 @@
 # SalBot
 
-The bot was created by Samu#5270
-You can use the code however you want, idk how to make licences and stuff so enjoy
+This was my first discord bot that featured in a 7k discord server... Dont blame me! I was just starting
